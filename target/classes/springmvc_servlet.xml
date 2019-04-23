@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+
+    <!--次级控制器在哪里-->
+    <context:component-scan base-package="com.chixing.controller"></context:component-scan>
+
+
+    <mvc:annotation-driven />
+    <mvc:default-servlet-handler/>
+    <!--<mvc:resources mapping="/resources/**" location="/" />-->
+
+    <!--响应视图解析-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/"/><!-- 表示从web根目录下找资源-->
+        <property name="suffix" value=".html"/><!-- 表示以html结尾的文件-->
+    </bean>
+
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+    <!--处理静态资源 -->
+
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/images/**" location="/images/" />
+    <mvc:resources mapping="/js/**" location="/js/" />
+
+    <!-- =================日期转换器====================-->
+    <mvc:annotation-driven conversion-service="formattingConversionService"/>
+    <bean id="formattingConversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.chixing.convertor.StringToDateConverter"/>
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>
+

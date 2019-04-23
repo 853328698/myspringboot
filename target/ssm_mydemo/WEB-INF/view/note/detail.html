@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>游记</title>
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="icon" href="/ssm_mydemo/images/favicon.ico">
+        <link rel="stylesheet" href="/ssm_mydemo/css/index.css">
+        <link rel="stylesheet" href="/ssm_mydemo/css/vacations.css">
+        <link rel="stylesheet" href="/ssm_mydemo/css/note/write.css">
+        <link rel="stylesheet" href="/ssm_mydemo/css/header_nav.css">
+        <link rel="stylesheet" href="/ssm_mydemo/css/footer.css">
+        <script type="text/javascript" charset="utf-8" src="/ssm_mydemo/ueditor/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/ssm_mydemo/ueditor/ueditor.all.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="https://github.com/jacwright/date.format.git"> </script>
+        <script type="text/javascript" charset="utf-8" src="/ssm_mydemo/ueditor/lang/zh-cn/zh-cn.js"></script>
+        <script src="/ssm_mydemo/js/ajaxfileupload.js"></script>
+
+        <script src="/ssm_mydemo/js/jquery.form.js"></script>
+        <script src="/ssm_mydemo/js/date.format.js"></script>
+    </head>
+    <body>
+    <!-- 2. 设置游记头图-->
+    <div class="note_title" style="margin-left:200px;margin-top:50px;margin-bottom:50px;font-size: 28px;font-weight: bold"></div>
+    <div class="set-note-bg">
+        <div class="set-bg-comp">
+
+            <!-- 显示游记头图  -->
+        </div>
+    </div>
+
+
+    <div style="width: 80%;margin: 0 auto;margin-top: 40px">
+
+        <!--游记详情 -->
+
+        <div id="note_detail" style="margin-top: 50px;margin-bottom: 50px">
+
+
+            <div class="note_relative" style="margin-bottom: 80px">
+                <label class="note_rel_list" style="font-weight: bold;font-size:16px;color: darkslategray">出游日期</label>
+                <span class="noteTripDate"  style="margin-right: 20px"></span>
+
+                <label class="note_rel_list" style="font-weight: bold;font-size:16px;color: darkslategray">出游天数：</label>
+                <span class="noteTripDays" style="margin-right: 20px"></span>
+
+                <label class="note_rel_list" style="font-weight: bold;font-size:16px;color: darkslategray">出游伙伴：</label>
+                <span class="noteTripPartner" ></span><span style="margin-right: 20px">天</span>
+
+                <label class="note_rel_list" style="font-weight: bold;font-size:16px;color: darkslategray">人均消费：</label>
+                <span class="noteTripFeePerPeople"  ></span><span>元</span>
+
+            </div>
+
+            <div class="note_content"></div>
+
+        </div>
+
+    </div>
+    </body>
+    <script src="/ssm_mydemo/js/note/detail.js"></script>
+</html>
